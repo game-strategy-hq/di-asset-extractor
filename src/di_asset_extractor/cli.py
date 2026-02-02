@@ -16,8 +16,8 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  di-extract "C:\\Program Files (x86)\\Diablo Immortal\\Package\\MPK" C:\\Users\\You\\sprites
-  di-extract /path/to/game/Package/MPK ./output
+  di-extract "C:\\Program Files (x86)\\Diablo Immortal\\Package\\MPK" .\\sprites
+  di-extract /path/to/game/Package/MPK ./sprites
 
 Finding your game files:
   Look for the Package\\MPK folder inside your Diablo Immortal installation.
