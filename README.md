@@ -34,18 +34,19 @@ uv tool install git+https://github.com/game-strategy-hq/di-asset-extractor
 ### 3. Run the extraction
 
 ```bash
-di-extract "C:\Program Files (x86)\Diablo Immortal" C:\Users\You\sprites
+di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK" C:\Users\You\sprites
 ```
 
 ## Finding Your Game Files
 
-The tool needs the folder containing `Resources.mpkinfo` and `.mpk` files.
+The tool needs the `Package\MPK` folder inside your Diablo Immortal installation.
 
-**Common Windows locations:**
-- `C:\Program Files (x86)\Diablo Immortal\`
-- `C:\ProgramData\Battle.net\Agent\data\cache\...`
+**Typical Windows path:**
+```
+C:\Program Files (x86)\Diablo Immortal\Package\MPK
+```
 
-Look for a folder that contains:
+This folder should contain:
 - `Resources.mpkinfo`
 - `Resources.mpk`
 - `Resources1.mpk`, `Resources2.mpk`, etc.
@@ -68,10 +69,10 @@ Options:
 
 ```bash
 # Windows
-di-extract "C:\Program Files (x86)\Diablo Immortal" C:\Users\You\Desktop\sprites
+di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK" C:\Users\You\Desktop\sprites
 
-# macOS/Linux (if you have the game files)
-di-extract ~/Games/DiabloImmortal ./sprites
+# macOS/Linux (if you have the game files copied)
+di-extract ~/Games/DiabloImmortal/Package/MPK ./sprites
 ```
 
 ## Output
