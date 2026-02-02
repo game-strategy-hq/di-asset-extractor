@@ -11,7 +11,9 @@ Extract sprite images from Diablo Immortal game files. This tool reads the game'
 
 ## Quick Start
 
-### 1. Install uv (Python package manager)
+### 1. Install uv
+
+uv is a fast Python package manager that automatically handles Python installation for you - no need to install Python separately.
 
 **Windows (PowerShell):**
 ```powershell
@@ -23,7 +25,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Restart your terminal after installing.
+**Close and reopen your terminal after installing.**
 
 ### 2. Install the extractor
 
