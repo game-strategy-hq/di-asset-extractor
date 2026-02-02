@@ -34,3 +34,9 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Test output
+test-output/
+
+# uv
+uv.lock
