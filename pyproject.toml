@@ -1,0 +1,17 @@
+[project]
+name = "di-asset-extractor"
+version = "1.0.0"
+description = "Extract sprite images from Diablo Immortal game files"
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=10.0.0",
+    "lz4>=4.3.0",
+    "texture2ddecoder>=1.0.0",
+]
+
+[project.scripts]
+di-extract = "di_asset_extractor.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
