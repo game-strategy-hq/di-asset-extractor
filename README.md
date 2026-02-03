@@ -15,7 +15,9 @@ Extract sprite images from Diablo Immortal game files. This tool reads the game'
 
 Download and install Git from: https://git-scm.com/download/win
 
-Use the default options during installation.
+Click "Next" through all the options (defaults are fine).
+
+**Close and reopen PowerShell after installing Git.**
 
 ### 2. Install uv
 
