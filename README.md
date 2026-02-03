@@ -9,33 +9,44 @@ Extract sprite images from Diablo Immortal game files. This tool reads the game'
 - Handles texture decompression (LZ4, BC7, ASTC)
 - Parses Cocos2d sprite atlas definitions
 
-## Quick Start
+## Quick Start (Windows)
 
-### 1. Install uv
+### 1. Install Git
 
-uv is a fast Python package manager that automatically handles Python installation for you - no need to install Python separately.
+Download and install Git from: https://git-scm.com/download/win
 
-**Windows (PowerShell):**
+Use the default options during installation.
+
+### 2. Install uv
+
+uv is a fast Python package manager that automatically handles Python for you - no need to install Python separately.
+
+Open **PowerShell** and run:
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-**macOS/Linux:**
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+**Close and reopen PowerShell after installing.**
 
-**Close and reopen your terminal after installing.**
+### 3. Install the extractor
 
-### 2. Install the extractor
-
-```bash
+```powershell
 uv tool install git+https://github.com/game-strategy-hq/di-asset-extractor
 ```
 
-### 3. Run the extraction
+## Quick Start (macOS/Linux)
 
 ```bash
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Restart terminal, then install the extractor
+uv tool install git+https://github.com/game-strategy-hq/di-asset-extractor
+```
+
+### 4. Run the extraction
+
+```powershell
 di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK" .\sprites
 ```
 
