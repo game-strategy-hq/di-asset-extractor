@@ -113,11 +113,14 @@ di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK"
 # Extract to a custom folder
 di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK" .\my-sprites
 
-# Search for a sprite using a screenshot
-di-search screenshot.png ./sprites
+# Search for a sprite using a screenshot (uses ./sprites by default)
+di-search screenshot.png
 
 # Search with more results
-di-search screenshot.png ./sprites --top 50
+di-search screenshot.png --top 50
+
+# Search in a different sprites folder
+di-search screenshot.png ./my-sprites
 ```
 
 ## Output
