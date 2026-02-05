@@ -144,9 +144,9 @@ The search results are copied to search-results/ next to the sprites folder.
     parser.add_argument(
         "--top",
         type=int,
-        default=10,
+        default=30,
         metavar="N",
-        help="Number of results to return (default: 10)",
+        help="Number of results to return (default: 30)",
     )
 
     parser.add_argument(

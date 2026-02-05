@@ -70,6 +70,8 @@ This folder should contain:
 
 ## Usage
 
+### Extracting Sprites
+
 ```
 di-extract <MPKS_DIR> [OUTPUT_DIR]
 
@@ -82,6 +84,26 @@ Options:
   --version   Show version number
 ```
 
+### Searching for Sprites
+
+Find similar sprites by providing a screenshot or image:
+
+```
+di-search <SCREENSHOT> [SPRITES_DIR] [--top N] [--rebuild]
+
+Arguments:
+  SCREENSHOT   Path to screenshot/image to search for
+  SPRITES_DIR  Directory containing extracted sprites (default: ./sprites)
+
+Options:
+  --top N      Number of results to return (default: 30)
+  --rebuild    Force rebuild the search index
+  --help       Show help message
+  --version    Show version number
+```
+
+Results are copied to a `search-results/` folder next to your sprites directory, named with rank prefixes (e.g., `01_sprite.png`, `02_sprite.png`).
+
 ## Examples
 
 ```bash
@@ -90,6 +112,12 @@ di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK"
 
 # Extract to a custom folder
 di-extract "C:\Program Files (x86)\Diablo Immortal\Package\MPK" .\my-sprites
+
+# Search for a sprite using a screenshot
+di-search screenshot.png ./sprites
+
+# Search with more results
+di-search screenshot.png ./sprites --top 50
 ```
 
 ## Output
