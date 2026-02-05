@@ -121,7 +121,7 @@ Examples:
   di-search screenshot.png ./sprites --top 20
   di-search icon.png ./my-sprites --rebuild
 
-The search results are copied to ./search-results/ for easy browsing.
+The search results are copied to search-results/ next to the sprites folder.
 """,
     )
 
@@ -190,8 +190,8 @@ The search results are copied to ./search-results/ for easy browsing.
             match_note = " <- exact match" if distance == 0 else ""
             print(f"  {i:2}. {filename} (distance: {distance}){match_note}")
 
-        # Copy results to search-results folder
-        results_dir = Path("./search-results")
+        # Copy results to search-results folder next to sprites
+        results_dir = args.sprites_dir.resolve().parent / "search-results"
         if results_dir.exists():
             shutil.rmtree(results_dir)
         results_dir.mkdir()
