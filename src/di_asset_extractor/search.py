@@ -12,13 +12,13 @@ from PIL import Image
 from . import __version__
 
 INDEX_FILENAME = ".sprite-index.json"
-INDEX_VERSION = 1
+INDEX_VERSION = 2
 
 
 def compute_hash(image_path: Path) -> str:
-    """Compute perceptual hash for an image."""
+    """Compute average hash for an image."""
     with Image.open(image_path) as img:
-        return str(imagehash.phash(img))
+        return str(imagehash.average_hash(img))
 
 
 def build_index(sprites_dir: Path) -> dict:
