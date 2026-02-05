@@ -12,13 +12,13 @@ from PIL import Image
 from . import __version__
 
 INDEX_FILENAME = ".sprite-index.json"
-INDEX_VERSION = 2
+INDEX_VERSION = 4
 
 
 def compute_hash(image_path: Path) -> str:
-    """Compute average hash for an image."""
+    """Compute color hash for an image (better for matching items by color)."""
     with Image.open(image_path) as img:
-        return str(imagehash.average_hash(img))
+        return str(imagehash.colorhash(img))
 
 
 def build_index(sprites_dir: Path) -> dict:
