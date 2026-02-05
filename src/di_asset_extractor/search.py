@@ -12,23 +12,13 @@ from PIL import Image
 from . import __version__
 
 INDEX_FILENAME = ".sprite-index.json"
-INDEX_VERSION = 5
-
-
-def normalize_image(img: Image.Image) -> Image.Image:
-    """Convert image to RGB, compositing RGBA onto black background."""
-    if img.mode == "RGBA":
-        bg = Image.new("RGB", img.size, (0, 0, 0))
-        bg.paste(img, mask=img.split()[3])
-        return bg
-    return img.convert("RGB")
+INDEX_VERSION = 6
 
 
 def compute_hash(image_path: Path) -> str:
-    """Compute perceptual hash for an image."""
+    """Compute difference hash (edge-based) for an image."""
     with Image.open(image_path) as img:
-        normalized = normalize_image(img)
-        return str(imagehash.phash(normalized))
+        return str(imagehash.dhash(img))
 
 
 def build_index(sprites_dir: Path) -> dict:
