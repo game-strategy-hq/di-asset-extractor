@@ -7,10 +7,12 @@ dependencies = [
     "pillow>=10.0.0",
     "lz4>=4.3.0",
     "texture2ddecoder>=1.0.0",
+    "imagehash>=4.3.0",
 ]
 
 [project.scripts]
 di-extract = "di_asset_extractor.cli:main"
+di-search = "di_asset_extractor.search:main"
 
 [build-system]
 requires = ["hatchling"]
